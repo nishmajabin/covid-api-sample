@@ -37,13 +37,7 @@ class CovidCase extends StatelessWidget {
                       MaterialPageRoute(
                         builder:
                             (context) => CovidDetailsView(
-                              country: country.country,
-                              flag: country.flag,
-                              cases: country.cases,
-                              recovered: country.recovered,
-                              active: country.active,
-                              deaths: country.deaths,
-                              continent: country.continent,
+                              country: country,                      
                             ),
                       ),
                     );

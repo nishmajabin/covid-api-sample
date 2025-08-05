@@ -1,24 +1,12 @@
-
 import 'package:flutter/material.dart';
+import 'package:testing_api_app/api%20settings/api_model.dart';
 
 class CovidDetailsView extends StatelessWidget {
-  final String country;
-  final String flag;
-  final int cases;
-  final int deaths;
-  final int recovered;
-  final int active;
-  final String continent;
+  final ApiModel country;
 
   const CovidDetailsView({
     super.key,
-    required this.country,
-    required this.flag,
-    required this.cases,
-    required this.recovered,
-    required this.active,
-    required this.deaths,
-    required this.continent,
+    required this.country
   });
 
   @override
@@ -29,17 +17,17 @@ class CovidDetailsView extends StatelessWidget {
         backgroundColor: const Color.fromARGB(255, 30, 29, 29),
         foregroundColor: Colors.white,
         centerTitle: true,
-        title: Text(country),
+        title: Text(country.country),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             SizedBox(height: 30),
-            Image.network(flag, width: 200),
+            Image.network(country.flag, width: 200),
             SizedBox(height: 20),
             Text(
-              'Cases: $cases',
+            'Cases: ${country.cases}',
               style: TextStyle(
                 color: Colors.black,
                 fontWeight: FontWeight.bold,
@@ -47,7 +35,7 @@ class CovidDetailsView extends StatelessWidget {
               ),
             ),
             Text(
-              'Recovered: $recovered',
+              'Recovered: ${country.recovered}',
               style: TextStyle(
                 color: Colors.black,
                 fontWeight: FontWeight.bold,
@@ -55,7 +43,7 @@ class CovidDetailsView extends StatelessWidget {
               ),
             ),
             Text(
-              'Active: $active',
+              'Active: ${country.active}',
               style: TextStyle(
                 color: Colors.black,
                 fontWeight: FontWeight.bold,
@@ -63,7 +51,7 @@ class CovidDetailsView extends StatelessWidget {
               ),
             ),
             Text(
-              'Deaths: $deaths',
+              'Deaths: ${country.deaths}',
               style: TextStyle(
                 color: const Color.fromARGB(255, 132, 22, 14),
                 fontWeight: FontWeight.bold,
@@ -71,7 +59,7 @@ class CovidDetailsView extends StatelessWidget {
               ),
             ),
             Text(
-              'Continent: $continent',
+              'Continent: ${country.continent}',
               style: TextStyle(
                 color: Colors.black,
                 fontWeight: FontWeight.bold,
