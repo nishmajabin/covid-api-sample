@@ -24,9 +24,9 @@ class CovidDetailsView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 255, 188, 183),
+      backgroundColor: const Color.fromARGB(255, 236, 236, 236),
       appBar: AppBar(
-        backgroundColor: const Color.fromARGB(255, 132, 22, 14),
+        backgroundColor: const Color.fromARGB(255, 30, 29, 29),
         foregroundColor: Colors.white,
         centerTitle: true,
         title: Text(country),

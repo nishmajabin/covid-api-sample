@@ -12,7 +12,7 @@ class CovidCase extends StatelessWidget {
       appBar: AppBar(
         title: Text('Covid Case Report'),
         centerTitle: true,
-        backgroundColor: const Color.fromARGB(255, 132, 22, 14),
+        backgroundColor: const Color.fromARGB(255, 30, 29, 29),
         foregroundColor: Colors.white,
       ),
       body: FutureBuilder<List<ApiModel>>(
